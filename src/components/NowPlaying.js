@@ -4,7 +4,7 @@ import { MovieList } from "./MovieList";
 import { Loading } from "./common/Loading";
 import { Error } from "./common/Error";
 
-export const NowPlaying = () => {
+const NowPlaying = () => {
   const [ movies, setMovies ] = useState([]);
   const [ isLoading, setIsloading ] = useState(true);
   const [ hasError, setHasError ] = useState(false);
@@ -31,3 +31,5 @@ export const NowPlaying = () => {
     </div>
   );
 }
+
+export default NowPlaying;

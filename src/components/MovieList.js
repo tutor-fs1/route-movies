@@ -6,7 +6,7 @@ export const MovieList = ({movies}) => {
       <div className="row row-cols-1 row-cols-md-2 g-4">
       {movies.length > 0 &&
         movies.map((movie) => {
-          return <Link to={`/movies/${movie.id}`}>
+          return <Link key={movie.id} to={`/movies/${movie.id}`}>
             <div className="col">
               <div className="card">
                 <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} className="card-img-top"
