@@ -1,7 +1,5 @@
-import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import { fetchMovieCredits } from './utils/movies/requests';
 import { Header } from './components/Header';
 import { Home } from './components/Home';
 import { NowPlaying } from './components/NowPlaying';
@@ -16,16 +14,7 @@ import { ProfileMessages } from './components/ProfileMessages';
 import { ProfilePictures } from './components/ProfilePictures';
 import { Footer } from './components/Footer';
 
-
-
 function App() {
-  const url = 'https://api.themoviedb.org/3/account/20237009?api_key=e02f1a73f1dfa78206a1bd73b8e11d14';
-
-
-fetch(url)
-  .then(res => res.json())
-  .then(json => console.log(json))
-  .catch(err => console.error('error:' + err));
   return (
     <>
       <Header />
